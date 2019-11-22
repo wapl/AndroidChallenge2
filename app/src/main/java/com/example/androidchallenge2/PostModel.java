@@ -9,12 +9,14 @@ public class PostModel {
     private String Title;
     private String Description;
     private Timestamp timestamp;
+    private String Category;
 
-    public PostModel(String Title,String Description)
+    public PostModel(String Title,String Description,String Category)
     {
         this.Title=Title;
         this.Description=Description;
         this.timestamp=new Timestamp(System.currentTimeMillis());
+        this.Category=Category;
     }
     public void setTitle(String Title)
     {
@@ -40,5 +42,13 @@ public class PostModel {
 
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
+    }
+    public void setCategory(String Category)
+    {
+        this.Category=Category;
+    }
+    public String getCategory()
+    {
+        return Category;
     }
 }

@@ -16,7 +16,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostHolder> {
 
     public PostAdapter()
     {
+
         postList=new ArrayList<PostModel>();
+        postList.add(new PostModel("FUCK","FUCK YOU","Personal Post"));
+        postList.add(new PostModel("SHIT","EAT SHIT","Professional Post"));
+        postList.add(new PostModel("BULLSHIT","EVERYTHNG IS BS","Important Post"));
     }
 
     @NonNull
