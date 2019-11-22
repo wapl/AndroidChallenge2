@@ -10,11 +10,11 @@ public class PostModel {
     private String Description;
     private Timestamp timestamp;
 
-    public PostModel(String Title,String description)
+    public PostModel(String Title,String Description)
     {
-        this.setTitle(Title);
-        this.setDescription(description);
-        setTimestamp(new Timestamp(System.currentTimeMillis()));
+        this.Title=Title;
+        this.Description=Description;
+        this.timestamp=new Timestamp(System.currentTimeMillis());
     }
     public void setTitle(String Title)
     {
