@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Challenge 2</string>
+    <string name="title_activity_create_post">CreatePost</string>
+</resources>
