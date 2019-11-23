@@ -38,6 +38,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostHolder> {
         holder.setTitle(postList.get(position).getTitle());
         holder.setDate(  postList.get(position).getTimestamp()  );
         holder.setDesc(postList.get(position).getDescription());
+        holder.setCategory(postList.get(position).getCategory());
 
     }
 

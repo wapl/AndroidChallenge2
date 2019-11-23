@@ -8,13 +8,18 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    public RecyclerView recyclerView;
-    public PostAdapter adapter;
-    public RecyclerView.LayoutManager manager;
-    public Spinner spinner;
+     RecyclerView recyclerView;
+     PostAdapter adapter;
+     RecyclerView.LayoutManager manager;
+     Spinner spinner;
+     
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         spinner=findViewById(R.id.spinner);
 
+
+
         ArrayList<String> options=new ArrayList<String>();
-        options.add("View by Creation Date");
-        options.add("View Personal Post");
-        options.add("View Professional Post");
-        options.add("View Important Post");
+        options.add("Creation Date");
+        options.add("Personal Post");
+        options.add("Professional Post");
+        options.add("Important Post");
 
 
         ArrayAdapter<String > arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,options);
