@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
      PostAdapter adapter;
      RecyclerView.LayoutManager manager;
      Spinner spinner;
-     
+
 
 
     @Override
