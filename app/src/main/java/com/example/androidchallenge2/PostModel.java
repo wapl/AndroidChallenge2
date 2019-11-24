@@ -1,23 +1,49 @@
 package com.example.androidchallenge2;
 
 
-import java.sql.Timestamp;
+import java.security.Timestamp;
+import java.sql.Time;
+
+import java.util.Map;
 
 
 public class PostModel {
 
     private String Title;
     private String Description;
-    private Timestamp timestamp;
+    private long timestamp;
     private String Category;
+    private String ID;
 
-    public PostModel(String Title,String Description,String Category)
+
+
+    public PostModel(String Title,String Description,String Category,String ID)
     {
         this.Title=Title;
         this.Description=Description;
-        this.timestamp=new Timestamp(System.currentTimeMillis());
+        this.timestamp=System.currentTimeMillis()/1000;
         this.Category=Category;
+        this.ID=ID;
+
     }
+    public PostModel()
+    {
+
+        //this is required
+
+    }
+    public long getTimestamp()
+    {
+        return timestamp;
+    }
+    public void setTimestamp(long timestamp)
+    {
+        this.timestamp=timestamp;
+    }
+
+
+
+
     public void setTitle(String Title)
     {
         this.Title=Title;
@@ -28,6 +54,7 @@ public class PostModel {
     }
 
 
+
     public String getTitle() {
         return Title;
     }
@@ -36,13 +63,7 @@ public class PostModel {
         return Description;
     }
 
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
 
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
     public void setCategory(String Category)
     {
         this.Category=Category;
@@ -51,4 +72,16 @@ public class PostModel {
     {
         return Category;
     }
+
+    public String getId()
+    {
+        return ID;
+
+    }
+    public void setId(String ID)
+    {
+        this.ID=ID;
+    }
+
+
 }

@@ -16,7 +16,7 @@ public class PostHolder extends RecyclerView.ViewHolder {
     private TextView Date;
     private TextView Desc;
     private TextView Category;
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+
     public PostHolder(@NonNull View itemView) {
         super(itemView);
         Title=itemView.findViewById(R.id.HoldTitle);
@@ -29,9 +29,9 @@ public class PostHolder extends RecyclerView.ViewHolder {
     {
         this.Title.setText(Title);
     }
-    public void setDate(Timestamp Date)
+    public void setDate(Long timestamp)
     {
-        this.Date.setText(sdf.format(Date));
+        this.Date.setText(timestamp.toString());
     }
     public void setDesc(String Desc)
     {

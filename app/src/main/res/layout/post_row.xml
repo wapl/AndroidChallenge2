@@ -35,6 +35,6 @@
         android:id="@+id/HoldDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minLines="6"
+        android:minLines="4"
         android:text="TextView" />
 </LinearLayout>

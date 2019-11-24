@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddPost"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,6 +45,7 @@
         android:id="@+id/Sort"
         android:layout_width="0dp"
         android:layout_height="33dp"
+        android:onClick="Sort"
         android:text="Sort"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,12 +56,25 @@
         app:layout_constraintVertical_bias="0.078" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAddPost"
         android:layout_width="0dp"
-        android:layout_height="149dp"
+        android:layout_height="147dp"
+        android:layout_marginEnd="200dp"
+        android:onClick="addPost"
         android:text="Add Post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddCategories"
+        android:layout_width="0dp"
+        android:layout_height="148dp"
+        android:onClick="addCategory"
+        android:text="add Category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toEndOf="@+id/btnAddPost" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
